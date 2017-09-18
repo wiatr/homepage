@@ -1,0 +1,190 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  // font-family: 'More Perfect DOS VGA';
+  // font-family: 'Terminus (TTF) for Windows';
+  // font-weight: bold;
+ font-family: 'VT323', monospace;
+}
+
+.frame {
+    position: fixed;
+    top: 35px;
+    border: 2px solid #ACAEAD;
+    min-height: 100px;
+    height: 100%;
+    width: 99%;
+    padding: 10px;
+
+}
+
+.navigation {
+    color: #000000;
+    background: #ACAEAD;
+    display: block;
+    margin-bottom: 2em;
+}
+
+.menu {
+    li {
+        display: inline-block;
+        margin-left: 40px;
+        font-size: 1.5em;
+        padding: 2px;
+        a {
+            text-decoration: none;
+            &:link {
+                color: black;
+            }
+            &:visited {
+                color: black;
+            }
+            &:hover {
+                background-color: black;
+                color: #ACAEAD;
+            }
+        }
+    }
+}
+
+#right {
+    float: right;
+    margin-right: 40px;
+}
+
+.bottom {
+    background: #01AFAE;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.console {
+  color: #000000;
+  background: #ACAEAD;
+  padding: 10px 5px;
+  margin: 10px 5px;
+  margin-left: -5px;
+  height: 70vh;
+  box-shadow: 25px 25px 0px 0px #000000;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.main {
+    border: 2px double black;
+    min-height: 100%;
+    padding: 5px;
+    p {
+        // margin-top: 10px;
+        // margin-bottom: 10px;
+        // font-size: 2em;
+        font-size: 2em;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+}
+
+.texttyper{
+    font-size: 2em;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+body {
+    background-color: #0001AE;
+
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.row::before, .row::after {
+  display: block;
+  clear: both;
+  content: "";
+}
+
+// @font-face {
+//     	font-family: 'Terminus (TTF) for Windows';
+//     	src: url('TerminusTTFWindows.woff2') format('woff2'),
+//     		url('TerminusTTFWindows.woff') format('woff');
+//             src: local('TerminusTTFWindows.woff2'), local('TerminusTTFWindows.woff'),
+//              	url('../fonts/TerminusTTFWindows.woff2') format('woff2'),
+//              	url('../fonts/TerminusTTFWindows.woff') format('woff');
+//     	font-weight: 500;
+//     	font-style: normal;
+
+    // font-family: 'More Perfect DOS VGA';
+    // src: url('../fonts/MorePerfectDOSVGA.woff2') format('woff2'),
+    //      url('../fonts/MorePerfectDOSVGA.woff') format('woff');
+    // src: local('MorePerfectDOSVGA.woff2'), local('more_perfect_dos_vgaregular'),
+    //  	url('../fonts/MorePerfectDOSVGA.woff2') format('woff2'),
+    //  	url('../fonts/MorePerfectDOSVGA.woff') format('woff');
+    // font-weight: normal;
+    // font-style: normal;
+
+// }
+// @font-face {
+// 	font-family: 'Terminus (TTF) for Windows';
+// 	src: url('TerminusTTFWindows-Bold.woff2') format('woff2'),
+// 		url('TerminusTTFWindows-Bold.woff') format('woff');
+//         src: local('TerminusTTFWindows-Bold.woff2'), local('TerminusTTFWindows-Bold.woff'),
+//             url('../fonts/TerminusTTFWindows-Bold.woff2') format('woff2'),
+//             url('../fonts/TerminusTTFWindows-Bold.woff') format('woff');
+// 	font-weight: bold;
+// 	font-style: normal;
+// }
+
+
+@for $i from 1 to 13 {
+  .col-#{$i} {
+    width: $i / 12 * 100%;
+  }
+}
+
+@media (min-width: 576px) {
+
+    @for $i from 1 to 13 {
+      .col-sm-#{$i} {
+        width: $i / 12 * 100%;
+      }
+    }
+
+}
+
+@media (min-width: 768px) {
+
+    @for $i from 1 to 13 {
+      .col-md-#{$i} {
+        width: $i / 12 * 100%;
+      }
+    }
+
+}
+
+@media (min-width: 992px) {
+
+    @for $i from 1 to 13 {
+      .col-lg-#{$i} {
+        width: $i / 12 * 100%;
+      }
+    }
+
+}
+
+@media (min-width: 1200px) {
+
+    @for $i from 1 to 13 {
+      .col-xl-#{$i} {
+        width: $i / 12 * 100%;
+      }
+    }
+}
