@@ -73,6 +73,42 @@
   margin-top: 60px;
 }
 
+.dosFrame {
+border: solid 1px white;
+height: 70vh;
+float: left;
+margin: 3px;
+padding: 3px;
+}
+
+.innerFrame {
+    border: solid 1px white;
+    min-height: 100%;
+    color: white;
+    padding: 5px;
+    font-size: 1em;
+    text-align: left;
+}
+.horizontal {
+    li {
+        list-style-type: none;
+        font-size: 1.5em;
+        a {
+            text-decoration: none;
+            &:link {
+                color: white;
+            }
+            &:visited {
+                color: white;
+            }
+            &:hover {
+                background-color: white;
+                color:black;
+            }
+        }
+    }
+}
+
 .main {
     border: 2px double black;
     min-height: 100%;
@@ -96,7 +132,7 @@
 }
 
 body {
-    background-color: #0001AE;
+    background-color: #000099;
 
 }
 
