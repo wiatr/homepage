@@ -21,9 +21,11 @@
 
 .navigation {
     color: #000000;
-    background: #ACAEAD;
+    background: #00CECD;
     display: block;
     margin-bottom: 2em;
+    font-size: 1.5em;
+    text-align: center;
 }
 
 .menu {
@@ -54,8 +56,8 @@
 }
 
 .bottom {
-    background: #01AFAE;
-    color: white;
+    background: #00CECD;
+    color: black;
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -101,13 +103,45 @@ padding: 3px;
             &:visited {
                 color: white;
             }
-            &:hover {
-                background-color: white;
-                color:black;
-            }
+            // &:hover {
+            //     background-color: white;
+            //     color:black;
+            // }
         }
     }
 }
+
+
+
+button {
+     border: none;
+     background-color: #000099;
+     width: 100%;
+     text-align: left;
+     font-size: 1.5em;
+
+     a {
+     text-decoration: none;
+
+     &:link {
+         color: white;
+     }
+     &:visited {
+         color: white;
+        }
+        &:hover {
+            background-color: #00CECD;
+            color: black;
+           }
+    }
+     &:hover {
+         background-color:#00CECD;
+          a {
+              color: black;
+          }
+        }
+    }
+
 
 .main {
     border: 2px double black;
