@@ -17,7 +17,8 @@
 
     <section class="container">
         <div class="row">
-        <article class="dosFrame col-4">
+        <div class="dosFrame col-4">
+            <div class="frame">
             <div class="innerFrame">
                 <ul class = "hoverlist">
                     <form><input class= "button categories"    type="text" value="      Name  |  Size | Time" /></form>
@@ -38,8 +39,10 @@
                     </form>
                 </ul>
             </div>
-        </article>
-        <article class="dosFrame col-7">
+            </div>
+            </div>
+        <div class="dosFrame col-8">
+        <div class="frame">
             <div class="innerFrame">
                 <div class="content">Content</div>
     <p id="typedtext"> </p>
@@ -47,7 +50,10 @@
     <p><a href="https://www.linkedin.com/in/krzysztof-wiatr/"> linked.in</a></p>
     <p><a href="KrzysztofWiatrCV.pdf">moje CV</a></p>
             </div>
-        </article>
+        </div>
+    </div>
+</div>
+
 
 <div id="myModal" class="modal col1">
   <div class="modal-content">
@@ -98,7 +104,7 @@
    });
 
    var aText = new Array(
-   "Robiłem różne rzeczy w życiu, pracowałem w organizacjch humanitarnych, przejechałem motorem z Polski do Nepalu. Więcej możesz przeczytać w moim CV i na linked.in ;)"
+   "Robiłem różne rzeczy w życiu, pracowałem w organizacjach zajmujących się edukacją, przejechałem motorem z Polski do Nepalu, realizowałem projekt edukacyjny w Ugandzie. We wszystkim co robiłem starałem się być jak najlepszy. Więcej możesz przeczytać w moim CV i na linked.in ;)"
    );
    var iSpeed = 60;
    var iIndex = 0;
@@ -136,7 +142,7 @@
     document.addEventListener("onload", typewriter());
 
     var modal = document.getElementById('myModal');
-    
+
 
     document.addEventListener("keyup", function(event) {
         event.preventDefault();

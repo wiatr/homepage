@@ -49,11 +49,16 @@ a {
 }
 
 .dosFrame {
-border: solid 1px white;
 height: 70vh;
+padding: 2px;
 float: left;
-margin: 3px;
-padding: 3px;
+}
+
+.frame {
+    border: solid 1px white;
+    color: white;
+    padding: 3px;
+    height: 70vh;
 }
 
 .innerFrame {
@@ -154,11 +159,10 @@ input.button{
   width: 100%;
   max-width: 1000px;
   margin: 0 auto;
-
 }
 
 .row::before, .row::after {
-  display: block;
+  display:block;
   clear: both;
   content: "";
 }
