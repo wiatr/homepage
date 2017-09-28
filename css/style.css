@@ -71,7 +71,7 @@ a {
 }
 
 .innerFrame p {
-  font-size: 1.45em;
+  font-size: 1.5em;
 }
 
 input.button {
@@ -79,7 +79,7 @@ input.button {
   background: none;
   width: 100%;
   text-align: left;
-  font-size: 1.45em;
+  font-size: 1.5em;
   color: white;
 }
 
