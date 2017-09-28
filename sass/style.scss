@@ -2,58 +2,22 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  // font-family: 'More Perfect DOS VGA';
-  // font-family: 'Terminus (TTF) for Windows';
-  // font-weight: bold;
  font-family: 'VT323', monospace;
 }
 
-.frame {
-    position: fixed;
-    top: 35px;
-    border: 2px solid #ACAEAD;
-    min-height: 100px;
-    height: 100%;
-    width: 99%;
-    padding: 10px;
-
+body {
+    background-color: #000099;
 }
 
-.navigation {
+.top {
     color: #000000;
     background: #00CECD;
-    display: block;
     margin-bottom: 2em;
     font-size: 1.5em;
     text-align: center;
+    top: 0;
 }
 
-.menu {
-    li {
-        display: inline-block;
-        margin-left: 40px;
-        font-size: 1.5em;
-        padding: 2px;
-        a {
-            text-decoration: none;
-            &:link {
-                color: black;
-            }
-            &:visited {
-                color: black;
-            }
-            &:hover {
-                background-color: black;
-                color: #ACAEAD;
-            }
-        }
-    }
-}
-
-#right {
-    float: right;
-    margin-right: 40px;
-}
 
 .bottom {
     background: #00CECD;
@@ -61,18 +25,13 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-}
-
-.console {
-  color: #000000;
-  background: #ACAEAD;
-  padding: 10px 5px;
-  margin: 10px 5px;
-  margin-left: -5px;
-  height: 70vh;
-  box-shadow: 25px 25px 0px 0px #000000;
-  text-align: center;
-  margin-top: 60px;
+    span {
+        display: inline-block;
+        margin-left: 40px;
+        font-size: 1.5em;
+        padding: 2px;
+        list-style-type: none;
+    }
 }
 
 .dosFrame {
@@ -88,86 +47,104 @@ padding: 3px;
     min-height: 100%;
     color: white;
     padding: 5px;
-    font-size: 1em;
     text-align: left;
-}
-.horizontal {
-    li {
-        list-style-type: none;
+    p {
         font-size: 1.5em;
-        a {
-            text-decoration: none;
-            &:link {
-                color: white;
-            }
-            &:visited {
-                color: white;
-            }
-            // &:hover {
-            //     background-color: white;
-            //     color:black;
-            // }
-        }
     }
 }
 
 
-
-button {
-     border: none;
-     background-color: #000099;
-     width: 100%;
-     text-align: left;
-     font-size: 1.5em;
-
-     a {
-     text-decoration: none;
-
-     &:link {
-         color: white;
+input.button{
+   border:0;
+   background: none;
+   width: 100%;
+   text-align: left;
+   font-size: 1.5em;
+   color: white;
      }
-     &:visited {
-         color: white;
-        }
-        &:hover {
-            background-color: #00CECD;
-            color: black;
-           }
-    }
-     &:hover {
-         background-color:#00CECD;
-          a {
-              color: black;
-          }
-        }
-    }
 
 
-.main {
+    .hoverlist {
+       list-style-type: none;
+
+      li.hover{
+         background-color: #00CECD;
+        input{
+          color: black;
+            }
+         }
+     }
+
+
+.modalFrame {
     border: 2px double black;
     min-height: 100%;
     padding: 5px;
-    p {
-        // margin-top: 10px;
-        // margin-bottom: 10px;
-        // font-size: 2em;
+    margin-left: 5px;
+    h5 {
         font-size: 2em;
         text-align: center;
         margin-top: 20px;
         margin-bottom: 40px;
+        font-weight: normal;
+    }
+    p {
+        font-size: 1.5em;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+    h6 {
+        font-size: 2em;
+        text-align: center;
+        margin-top: 240px;
+        margin-bottom: 20px;
+        font-weight: normal;
     }
 }
 
-.texttyper{
-    font-size: 2em;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 40px;
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 5px; /* Location of the box */
+    //left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
 }
 
-body {
-    background-color: #000099;
+/* Modal Content */
+.modal-content {
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    color: #000000;
+    background: #ACAEAD;
+    padding:10px 5px;
+    margin: 10px 5px;
+    margin-left: -5px;
+    height: 70vh;
+    box-shadow: 25px 25px 0px 0px #000000;
+    text-align: center;
+    margin-top: 60px;
+}
 
+/* The Close Button */
+.close {
+    color: black;
+    float: right;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .container {
@@ -181,38 +158,6 @@ body {
   clear: both;
   content: "";
 }
-
-// @font-face {
-//     	font-family: 'Terminus (TTF) for Windows';
-//     	src: url('TerminusTTFWindows.woff2') format('woff2'),
-//     		url('TerminusTTFWindows.woff') format('woff');
-//             src: local('TerminusTTFWindows.woff2'), local('TerminusTTFWindows.woff'),
-//              	url('../fonts/TerminusTTFWindows.woff2') format('woff2'),
-//              	url('../fonts/TerminusTTFWindows.woff') format('woff');
-//     	font-weight: 500;
-//     	font-style: normal;
-
-    // font-family: 'More Perfect DOS VGA';
-    // src: url('../fonts/MorePerfectDOSVGA.woff2') format('woff2'),
-    //      url('../fonts/MorePerfectDOSVGA.woff') format('woff');
-    // src: local('MorePerfectDOSVGA.woff2'), local('more_perfect_dos_vgaregular'),
-    //  	url('../fonts/MorePerfectDOSVGA.woff2') format('woff2'),
-    //  	url('../fonts/MorePerfectDOSVGA.woff') format('woff');
-    // font-weight: normal;
-    // font-style: normal;
-
-// }
-// @font-face {
-// 	font-family: 'Terminus (TTF) for Windows';
-// 	src: url('TerminusTTFWindows-Bold.woff2') format('woff2'),
-// 		url('TerminusTTFWindows-Bold.woff') format('woff');
-//         src: local('TerminusTTFWindows-Bold.woff2'), local('TerminusTTFWindows-Bold.woff'),
-//             url('../fonts/TerminusTTFWindows-Bold.woff2') format('woff2'),
-//             url('../fonts/TerminusTTFWindows-Bold.woff') format('woff');
-// 	font-weight: bold;
-// 	font-style: normal;
-// }
-
 
 @for $i from 1 to 13 {
   .col-#{$i} {
