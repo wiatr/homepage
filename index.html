@@ -20,45 +20,48 @@
         <article class="dosFrame col-4">
             <div class="innerFrame">
                 <ul class = "hoverlist">
+                    <form><input class= "button categories"    type="text" value="      Name  |  Size | Time" /></form>
+                    <li><form action="index.html" >
+                        <input class= "button"    type="submit" value="/ ..        |       |     " /></form></li>
                     <li class = "hover"><form action="index.html" >
-                        <input class= "button"    type="submit" value="/home       | 24 kb | 20.09.17" /></form></li>
+                        <input class= "button"    type="submit" value="/home       | 5.4 kb|Sep 20 2017" /></form></li>
                     <li><form action="about.html">
-                        <input class= "button" type="submit" value="/about me   | 24 kb | 20.09.17" /></form></li>
+                        <input class= "button" type="submit" value="/my story   | 5.4 kb|Sep 20 2017" /></form></li>
                     <li><form action="projects.html">
-                        <input class= "button" type="submit" value="/projects   | 24 kb | 20.09.17" /></li>
+                        <input class= "button" type="submit" value="/projects   | 5.4 kb|Sep 20 2017" /></li>
                     </form>
                     <li><form action="experience.html">
-                        <input class= "button" type="submit" value="/experience | 24 kb | 20.09.17" /></li>
+                        <input class= "button" type="submit" value="/experience | 5.4 kb|Sep 20 2017" /></li>
                     </form>
                     <li><form action="contact.html">
-                        <input class= "button" type="submit" value="/contact me | 24 kb | 20.09.17" /></li>
+                        <input class= "button" type="submit" value="/contact me | 5.4 kb|Sep 20 2017" /></li>
                     </form>
                 </ul>
             </div>
         </article>
         <article class="dosFrame col-7">
             <div class="innerFrame">
+                <div class="content">Content</div>
     <p id="typedtext"> </p>
             </div>
         </article>
-
-<!-- The Modal -->
-<div id="myModal" class="modal">
-  <!-- Modal content -->
+</div>
+<div id="myModal" class="modal col1">
   <div class="modal-content">
     <div class="modalFrame">
         <h5>< Potrzebujesz pomocy? ></h5>
-        <p>Z checią pomogę Ci we wszystkim związanym z front-endem. Jeśli szukasz kogoś dla swojego klienta, zespołu, napisz do mnie na krzywiatr@gmail.com</p>
+        <p>Z checią pomogę Ci we wszystkim związanym z front-endem. Jeśli szukasz kogoś dla swojego klienta, zespołu, napisz do mnie na <a href="mailto: krzywiatr@gmail.com">krzywiatr@gmail.com</a></p>
         <h6>< Press ESC to exit ></h6>
     </div>
   </div>
 </div>
+
     </section>
 
-    <footer>
+    <footer class="col-1">
         <div class="bottom">
             <span>F2=Help</span>
-            <span>ESC=Home</span>
+            <span>ESC=Exit</span>
             <span>Enter=Execute</span>
             <span>Arrow Up/Down=Next field</span>
         </div>
@@ -93,7 +96,8 @@
    });
 
    var aText = new Array(
-   "Nazywam się Krzysiek, moim pierwszyym kopmuterem był IBM 386 SLC. Od tego momentu pasjonują mnie komputery i uwielbiam grafikę 8-bit. Obecnie szukam pierwszej pracy jako front-end developer. Jeśli podoba Ci się to co robię, odezwij się!",
+   "Nazywam się Krzysiek, moim pierwszym kopmuterem był IBM 386 SLC. Od tego momentu pasjonują mnie komputery i uwielbiam grafikę 8-bit. Obecnie szukam pierwszej pracy jako front-end developer. Jeśli podoba Ci się to co robię, odezwij się!",
+   "Bez obaw, potrafię robić też strony, które wyglądają nowocześniej. Skończyłem bootcamp Javascript Developer: React w Coders Lab ;)"
    );
    var iSpeed = 60;
    var iIndex = 0;
@@ -130,32 +134,7 @@
 
     document.addEventListener("onload", typewriter());
 
-
-    // Get the modal
     var modal = document.getElementById('myModal');
-
-    // // Get the button that opens the modal
-    // var btn = document.getElementById("myBtn");
-
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    // // When the user clicks the button, open the modal
-    // btn.onclick = function() {
-    //     modal.style.display = "block";
-    // }
-
-    // // When the user clicks on <span> (x), close the modal
-    // span.onclick = function() {
-    //     modal.style.display = "none";
-    // }
-
-    // When the user clicks anywhere outside of the modal, close it
-    // window.onclick = function(event) {
-    //     if (event.target == modal) {
-    //         modal.style.display = "none";
-    //     }
-    // }
 
 
     document.addEventListener("keyup", function(event) {

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=VT323&amp;subset=latin-ext" rel="stylesheet">
+</head>
+<body>
+    <header class= "top col1">
+        <span>C:\ Cześć, miło Cię widzieć ;)</span>
+    </header>
+
+
+
+
+    <section class="container">
+        <div class="row">
+        <article class="dosFrame col-4">
+            <div class="innerFrame">
+                <ul class = "hoverlist">
+                    <form><input class= "button categories"    type="text" value="      Name  |  Size | Time" /></form>
+                    <li><form action="index.html" >
+                        <input class= "button"    type="submit" value="/ ..        |       |     " /></form></li>
+                    <li><form action="index.html" >
+                        <input class= "button"    type="submit" value="/home       | 5.4 kb|Sep 20 2017" /></form></li>
+                    <li><form action="about.html">
+                        <input class= "button" type="submit" value="/my story   | 5.4 kb|Sep 20 2017" /></form></li>
+                    <li><form action="projects.html">
+                        <input class= "button" type="submit" value="/projects   | 5.4 kb|Sep 20 2017" /></li>
+                    </form>
+                    <li class = "hover"><form action="experience.html">
+                        <input class= "button" type="submit" value="/experience | 5.4 kb|Sep 20 2017" /></li>
+                    </form>
+                    <li><form action="contact.html">
+                        <input class= "button" type="submit" value="/contact me | 5.4 kb|Sep 20 2017" /></li>
+                    </form>
+                </ul>
+            </div>
+        </article>
+        <article class="dosFrame col-7">
+            <div class="innerFrame">
+                <div class="content">Content</div>
+    <p id="typedtext"> </p>
+    <br>
+    <p><a href="https://www.linkedin.com/in/krzysztof-wiatr/"> linked.in</a></p>
+    <p><a href="KrzysztofWiatrCV.pdf">moje CV</a></p>
+            </div>
+        </article>
+
+<div id="myModal" class="modal col1">
+  <div class="modal-content">
+    <div class="modalFrame">
+        <h5>< Potrzebujesz pomocy? ></h5>
+        <p>Z checią pomogę Ci we wszystkim związanym z front-endem. Jeśli szukasz kogoś dla swojego klienta, zespołu, napisz do mnie na krzywiatr@gmail.com</p>
+        <h6>< Press ESC to exit ></h6>
+    </div>
+  </div>
+</div>
+    </section>
+
+    <footer class="col-1">
+        <div class="bottom">
+            <span>F2=Help</span>
+            <span>ESC=Exit</span>
+            <span>Enter=Execute</span>
+            <span>Arrow Up/Down=Next field</span>
+        </div>
+    </footer>
+
+    <script type="text/javascript">
+
+
+    var active = document.querySelector(".hover") || document.querySelector(".hoverlist li");
+
+    var lis = document.getElementsByTagName("li");
+    var len = lis.length;
+    for (var i=0; i < len; i++) {
+        lis[i].addEventListener("mouseover",function(e) {
+          active.classList.remove("hover");
+          active=e.target.parentNode.parentNode;
+          active.classList.add("hover");
+          active.querySelector('input').focus();
+        });
+    }
+    document.addEventListener("keydown", function (e){
+        active.classList.remove("hover");
+        if (e.which == 40){
+            active = active.nextElementSibling || active;
+        }else if (e.which == 38){
+            active = active.previousElementSibling || active;
+        }else{
+            active = e.target;
+        }
+        active.classList.add("hover");
+        active.querySelector('input').focus();
+   });
+
+   var aText = new Array(
+   "Robiłem różne rzeczy w życiu, pracowałem w organizacjch humanitarnych, przejechałem motorem z Polski do Nepalu. Więcej możesz przeczytać w moim CV i na linked.in ;)"
+   );
+   var iSpeed = 60;
+   var iIndex = 0;
+   var iArrLength = aText[0].length;
+   var iScrollAt = 20;
+
+   var iTextPos = 0;
+   var sContents = '';
+   var iRow;
+
+
+
+    function typewriter()
+    {
+     sContents =  ' ';
+     iRow = Math.max(0, iIndex-iScrollAt);
+     var destination = document.getElementById("typedtext");
+
+     while ( iRow < iIndex ) {
+      sContents += aText[iRow++] + '<br />';
+     }
+     destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
+     if ( iTextPos++ == iArrLength ) {
+      iTextPos = 0;
+      iIndex++;
+      if ( iIndex != aText.length ) {
+       iArrLength = aText[iIndex].length;
+       setTimeout("typewriter()", 500);
+      }
+     } else {
+      setTimeout("typewriter()", iSpeed);
+     }
+    }
+
+    document.addEventListener("onload", typewriter());
+
+    var modal = document.getElementById('myModal');
+    
+
+    document.addEventListener("keyup", function(event) {
+        event.preventDefault();
+        if (event.keyCode == 113) {
+            modal.style.display = "block"
+        }
+    });
+
+    document.addEventListener("keyup", function(event) {
+        event.preventDefault();
+        if (event.keyCode == 27) {
+            window.location = "experience.html"
+        }
+    });
+
+
+    </script>
+</body>
+</html>

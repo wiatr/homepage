@@ -3,41 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cześć!</title>
+    <title>Portfolio</title>
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css?family=VT323&amp;subset=latin-ext" rel="stylesheet">
 </head>
 <body>
-<nav class= "navigation">
-    <ul class="menu">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About me</a></li>
-        <li><a href="#">Projects</a></li>
-        <li><a href="#">Experience</a></li>
-        <li id="right"><a href="#">Contact me</a></li>
-    </ul>
-</nav>
+    <header class= "top col1">
+        <span>C:\ Cześć, miło Cię widzieć ;)</span>
+    </header>
+
+
+
+
     <section class="container">
-        <article class="console">
-            <div class="main">
-                <p>< O mnie ></p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+        <div class="row">
+        <article class="dosFrame col-4">
+            <div class="innerFrame">
+                <ul class = "hoverlist">
+                    <form><input class= "button categories"    type="text" value="      Name  |  Size | Time" /></form>
+                    <li><form action="index.html" >
+                        <input class= "button"    type="submit" value="/ ..        |       |     " /></form></li>
+                    <li><form action="index.html" >
+                        <input class= "button"    type="submit" value="/home       | 5.4 kb|Sep 20 2017" /></form></li>
+                    <li class = "hover"><form action="about.html">
+                        <input class= "button" type="submit" value="/my story   | 5.4 kb|Sep 20 2017" /></form></li>
+                    <li><form action="projects.html">
+                        <input class= "button" type="submit" value="/projects   | 5.4 kb|Sep 20 2017" /></li>
+                    </form>
+                    <li><form action="experience.html">
+                        <input class= "button" type="submit" value="/experience | 5.4 kb|Sep 20 2017" /></li>
+                    </form>
+                    <li><form action="contact.html">
+                        <input class= "button" type="submit" value="/contact me | 5.4 kb|Sep 20 2017" /></li>
+                    </form>
+                </ul>
             </div>
         </article>
-
+        <article class="dosFrame col-7">
+            <div class="innerFrame">
+                <div class="content">Content</div>
+    <p id="typedtext"> </p>
+            </div>
+        </article>
+</div>
+<div id="myModal" class="modal col1">
+  <div class="modal-content">
+    <div class="modalFrame">
+        <h5>< Potrzebujesz pomocy? ></h5>
+        <p>Z checią pomogę Ci we wszystkim związanym z front-endem. Jeśli szukasz kogoś dla swojego klienta, zespołu, napisz do mnie na krzywiatr@gmail.com</p>
+        <h6>< Press ESC to exit ></h6>
+    </div>
+  </div>
+</div>
     </section>
 
-    <footer>
-        <ul class="menu bottom">
-            <li>F1=Help</li>
-            <li>ESC=Home</li>
-            <li>Enter=Execute</li>
-            <li>Tab=Next field</li>
-        </ul>
+    <footer class="col-1">
+        <div class="bottom">
+            <span>F2=Help</span>
+            <span>ESC=Exit</span>
+            <span>Enter=Execute</span>
+            <span>Arrow Up/Down=Next field</span>
+        </div>
     </footer>
+
+    <script type="text/javascript">
+
+
+    var active = document.querySelector(".hover") || document.querySelector(".hoverlist li");
+
+    var lis = document.getElementsByTagName("li");
+    var len = lis.length;
+    for (var i=0; i < len; i++) {
+        lis[i].addEventListener("mouseover",function(e) {
+          active.classList.remove("hover");
+          active=e.target.parentNode.parentNode;
+          active.classList.add("hover");
+          active.querySelector('input').focus();
+        });
+    }
+    document.addEventListener("keydown", function (e){
+        active.classList.remove("hover");
+        if (e.which == 40){
+            active = active.nextElementSibling || active;
+        }else if (e.which == 38){
+            active = active.previousElementSibling || active;
+        }else{
+            active = e.target;
+        }
+        active.classList.add("hover");
+        active.querySelector('input').focus();
+   });
+
+   var aText = new Array(
+   "Pasjonuje mnie technologia i ludzie, dlatego studiowałem psychologię. Później w pracy zajmowałem się projektowaniem i tworzeniem procesów, produktów i projektów edukacyjnych. Przeprowadziłem ponad 2000 godzin szkoleń i warsztatów dla osób i organizacji z kilkudziesięciu krajów . Używałem w nich nowych technologii, zlecałem robienie aplikacji natywnych i webowych. Zawsze myślałem, że żeby zajmować się zawodowo programowaniem, trzeba skończyć informatykę.",
+   "Kiedy poznałem osoby, które ukończyły bootcampy i dowiedziałem się, że można to zrobić też w inny sposób, byłem podekscytowany. Z tego powodu postanowiłem zostać programistą i ukończyłem bootcamp Coders Lab, Javascript Developer: React. Chcę zostać jak najlepszym programistą front-end, specjalizować się w javascript i rozwijać się w kierunku UX"
+   );
+   var iSpeed = 100;
+   var iIndex = 0;
+   var iArrLength = aText[0].length;
+   var iScrollAt = 20;
+
+   var iTextPos = 0;
+   var sContents = '';
+   var iRow;
+
+
+
+    function typewriter()
+    {
+     sContents =  ' ';
+     iRow = Math.max(0, iIndex-iScrollAt);
+     var destination = document.getElementById("typedtext");
+
+     while ( iRow < iIndex ) {
+      sContents += aText[iRow++] + '<br />';
+     }
+     destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
+     if ( iTextPos++ == iArrLength ) {
+      iTextPos = 0;
+      iIndex++;
+      if ( iIndex != aText.length ) {
+       iArrLength = aText[iIndex].length;
+       setTimeout("typewriter()", 500);
+      }
+     } else {
+      setTimeout("typewriter()", iSpeed);
+     }
+    }
+
+    document.addEventListener("onload", typewriter());
+
+    var modal = document.getElementById('myModal');
+
+    document.addEventListener("keyup", function(event) {
+        event.preventDefault();
+        if (event.keyCode == 113) {
+            modal.style.display = "block"
+        }
+    });
+
+    document.addEventListener("keyup", function(event) {
+        event.preventDefault();
+        if (event.keyCode == 27) {
+            window.location = "about.html"
+        }
+    });
+
+
+    </script>
 </body>
 </html>
