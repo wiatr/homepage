@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=VT323&amp;subset=latin-ext" rel="stylesheet">
 </head>
 <body>
-    <header class= "top col1">
+    <header class= "top col-12">
         <span>C:\ Cześć, miło Cię widzieć ;)</span>
     </header>
 
@@ -45,13 +45,13 @@
         <div class="frame">
             <div class="innerFrame">
                 <div class="content">Content</div>
-    <p id="typedtext"> </p>
+                <p id="typedtext"> </p>
             </div>
         </div>
     </div>
 </div>
 
-<div id="myModal" class="modal col1">
+<div id="myModal" class="modal col1 col-sm-12">
   <div class="modal-content">
     <div class="modalFrame">
         <h5>< Potrzebujesz pomocy? ></h5>
@@ -63,7 +63,7 @@
 
     </section>
 
-    <footer class="col-1">
+    <footer class="col-12">
         <div class="bottom">
             <span>F2=Help</span>
             <span>ESC=Exit</span>
@@ -101,10 +101,10 @@
    });
 
    var aText = new Array(
-   "Nazywam się Krzysiek, moim pierwszym kopmuterem był IBM 386 SLC. Od tego momentu pasjonują mnie komputery i uwielbiam grafikę 8-bit. Obecnie szukam pierwszej pracy jako front-end developer. Jeśli podoba Ci się to co robię, odezwij się!",
-   "Bez obaw, potrafię robić też strony, które wyglądają nowocześniej. Skończyłem bootcamp Javascript Developer: React w Coders Lab ;)"
+   "Mam na imię Krzysiek, moim pierwszym komputerem był IBM 386 SLC. Od tego momentu pasjonują mnie komputery i uwielbiam grafikę 8-bit. Obecnie szukam pierwszej pracy jako front-end developer. Jeśli podoba Ci się to co robię, odezwij się!",
+   "Bez obaw, potrafię robić też strony, które wyglądają nowocześnie. Skończyłem bootcamp Javascript Developer: React w Coders Lab ;)"
    );
-   var iSpeed = 50;
+   var iSpeed = 30;
    var iIndex = 0;
    var iArrLength = aText[0].length;
    var iScrollAt = 20;
@@ -132,27 +132,36 @@
        iArrLength = aText[iIndex].length;
        setTimeout("typewriter()", 500);
       }
-  } else {
+     } else {
       setTimeout("typewriter()", iSpeed);
      }
     }
 
+    document.addEventListener("keyup", function(event) {
+        event.preventDefault();
+        if (event.keyCode == 32) {
+            var iSpeed = 1;
+        }
+    });
+
     document.addEventListener("onload", typewriter());
 
+
+
+
     var modal = document.getElementById('myModal');
+
+    document.addEventListener("click", typewriter());
 
 
     document.addEventListener("keyup", function(event) {
         event.preventDefault();
         if (event.keyCode == 113) {
             modal.style.display = "block"
-        }
-    });
-
-    document.addEventListener("keyup", function(event) {
-        event.preventDefault();
-        if (event.keyCode == 27) {
+        } else if  (event.keyCode == 27) {
             window.location = "index.html"
+        } else {
+            console.log("ała, za każdym razem jak mnie wciskasz, a nie mam funkcji, to robię błąd :(");
         }
     });
 

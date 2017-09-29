@@ -21,7 +21,7 @@
             <div class="frame">
             <div class="innerFrame">
                 <ul class = "hoverlist">
-                    <form><input class= "button categories"    type="text" value="      Name  |  Size | Time" /></form>
+                    <form action="index.html"><input class= "button categories"    type="submit" value="      Name  |  Size | Time" /></form>
                     <li><form action="index.html" >
                         <input class= "button"    type="submit" value="/ ..        |       |     " /></form></li>
                     <li><form action="index.html" >
@@ -44,11 +44,11 @@
         <div class="dosFrame col-8">
         <div class="frame">
             <div class="innerFrame">
-                <div class="content">Content</div>
-    <p id="typedtext"> </p>
-    <br>
-    <p><a href="https://www.linkedin.com/in/krzysztof-wiatr/"> linked.in</a></p>
-    <p><a href="KrzysztofWiatrCV.pdf">moje CV</a></p>
+                    <div class="content">Content</div>
+                    <p id="typedtext2"> </p>
+                    <p>Pracowałem w organizacjach zajmujących się edukacją, projektowałem produkty i aplikacje edukacyjne, przejechałem motorem z Polski do Nepalu, realizowałem projekt edukacyjny w Ugandzie. We wszystkim co robiłem, starałem się być jak najlepszy. Więcej możesz przeczytać w moim CV i na linked.in ;)</p>
+                    <p class = "logo"><span class = "icon">In </span><a href="https://www.linkedin.com/in/krzysztof-wiatr/">linked.in</a></p>
+                    <p class = "logo"><span class = "icon">Cv </span><a href="KrzysztofWiatrCV.pdf">moje cv</a></p>
             </div>
         </div>
     </div>
@@ -104,9 +104,9 @@ console.log("Cieszę się, że zaglądasz do konsoli. Widzisz errory? Pojawiają
    });
 
    var aText = new Array(
-   "Robiłem różne rzeczy w życiu, pracowałem w organizacjach zajmujących się edukacją, przejechałem motorem z Polski do Nepalu, realizowałem projekt edukacyjny w Ugandzie. We wszystkim co robiłem starałem się być jak najlepszy. Więcej możesz przeczytać w moim CV i na linked.in ;)"
+   "Mam unikalne doświadczenie zawodowe:"
    );
-   var iSpeed = 60;
+   var iSpeed = 50;
    var iIndex = 0;
    var iArrLength = aText[0].length;
    var iScrollAt = 20;
@@ -121,7 +121,7 @@ console.log("Cieszę się, że zaglądasz do konsoli. Widzisz errory? Pojawiają
     {
      sContents =  ' ';
      iRow = Math.max(0, iIndex-iScrollAt);
-     var destination = document.getElementById("typedtext");
+     var destination = document.getElementById("typedtext2");
 
      while ( iRow < iIndex ) {
       sContents += aText[iRow++] + '<br />';

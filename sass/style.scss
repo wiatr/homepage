@@ -10,7 +10,7 @@ body {
 }
 
 a {
-    color: white;
+    color: #F4FF6C;
 }
 
 #typedtext2 {
@@ -68,17 +68,42 @@ float: left;
     padding: 5px;
     text-align: left;
     p {
-        font-size: 1.5em;
+        font-size: 1.45em;
     }
 }
 
+#typedtext2 {
+    margin-bottom: 1em;
+}
+
+.logo {
+    padding: 1em;
+    display: inline-block;
+    text-align: center;
+    width: 45%
+}
+.mail {
+    padding: 1em;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+.icon {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    margin-right: 5px;
+    border-radius: 15%;
+    border-style: dashed black;
+}
 
 input.button{
    border:0;
    background: none;
    width: 100%;
    text-align: left;
-   font-size: 1.5em;
+   font-size: 1.45em;
    color: white;
      }
      input.categories {

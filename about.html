@@ -21,7 +21,7 @@
             <div class="frame">
             <div class="innerFrame">
                 <ul class = "hoverlist">
-                    <form><input class= "button categories"    type="text" value="      Name  |  Size | Time" /></form>
+                    <form action="index.html"><input class= "button categories"    type="submit" value="      Name  |  Size | Time" /></form>
                     <li><form action="index.html" >
                         <input class= "button"    type="submit" value="/ ..        |       |     " /></form></li>
                     <li><form action="index.html" >
@@ -43,23 +43,25 @@
             </div>
         <div class="dosFrame col-8">
         <div class="frame">
-                <div class="innerFrame">
-                <div class="content">Content</div>
-    <p id="typedtext"> </p>
+                    <div class="innerFrame">
+                        <div class="content">Content</div>
+                        <p id="typedtext2"></p>
+                        <p>Dlatego studiowałem psychologię i skończyłem bootcamp. Później w pracy zajmowałem się projektowaniem i tworzeniem procesów, produktów i projektów edukacyjnych. Przeprowadziłem ponad 2000 godzin szkoleń i warsztatów dla osób i organizacji z kilkudziesięciu krajów . Używałem w nich nowych technologii, zlecałem robienie aplikacji natywnych i webowych. Zawsze myślałem, że żeby zajmować się zawodowo programowaniem, trzeba skończyć informatykę.
+                            Kiedy poznałem osoby, które ukończyły bootcampy i dowiedziałem się, że można to zrobić też w inny sposób, byłem podekscytowany. Z tego powodu postanowiłem zostać programistą i ukończyłem bootcamp Coders Lab, Javascript Developer: React. Chcę zostać jak najlepszym programistą front-end, specjalizować się w javascript i rozwijać się w kierunku UX"</p>
             </div>
         </div>
     </div>
 </div>
 
-<div id="myModal" class="modal col1">
-  <div class="modal-content">
-    <div class="modalFrame">
-        <h5>< Potrzebujesz pomocy? ></h5>
-        <p>Z checią pomogę Ci we wszystkim związanym z front-endem. Jeśli szukasz kogoś dla swojego klienta, zespołu, napisz do mnie na krzywiatr@gmail.com</p>
-        <h6>< Press ESC to exit ></h6>
-    </div>
-  </div>
-</div>
+        <div id="myModal" class="modal col1">
+              <div class="modal-content">
+                    <div class="modalFrame">
+                        <h5>< Potrzebujesz pomocy? ></h5>
+                        <p>Z checią pomogę Ci we wszystkim związanym z front-endem. Jeśli szukasz kogoś dla swojego klienta, zespołu, napisz do mnie na krzywiatr@gmail.com</p>
+                        <h6>< Press ESC to exit ></h6>
+                    </div>
+              </div>
+        </div>
     </section>
 
     <footer class="col-1">
@@ -100,10 +102,9 @@ console.log("Cieszę się, że zaglądasz do konsoli. Widzisz errory? Pojawiają
    });
 
    var aText = new Array(
-   "Pasjonuje mnie technologia i ludzie, dlatego studiowałem psychologię. Później w pracy zajmowałem się projektowaniem i tworzeniem procesów, produktów i projektów edukacyjnych. Przeprowadziłem ponad 2000 godzin szkoleń i warsztatów dla osób i organizacji z kilkudziesięciu krajów . Używałem w nich nowych technologii, zlecałem robienie aplikacji natywnych i webowych. Zawsze myślałem, że żeby zajmować się zawodowo programowaniem, trzeba skończyć informatykę.",
-   "Kiedy poznałem osoby, które ukończyły bootcampy i dowiedziałem się, że można to zrobić też w inny sposób, byłem podekscytowany. Z tego powodu postanowiłem zostać programistą i ukończyłem bootcamp Coders Lab, Javascript Developer: React. Chcę zostać jak najlepszym programistą front-end, specjalizować się w javascript i rozwijać się w kierunku UX"
+   "Pasjonuje mnie technologia i ludzie."
    );
-   var iSpeed = 100;
+   var iSpeed = 50;
    var iIndex = 0;
    var iArrLength = aText[0].length;
    var iScrollAt = 20;
@@ -118,7 +119,7 @@ console.log("Cieszę się, że zaglądasz do konsoli. Widzisz errory? Pojawiają
     {
      sContents =  ' ';
      iRow = Math.max(0, iIndex-iScrollAt);
-     var destination = document.getElementById("typedtext");
+     var destination = document.getElementById("typedtext2");
 
      while ( iRow < iIndex ) {
       sContents += aText[iRow++] + '<br />';
