@@ -70,8 +70,8 @@ document.addEventListener("keyup", function(event) {
     if (event.keyCode == 32) {
         typewriter();
         blink.style.display = "none"
-        home.classList.add("hover");
-        home.querySelector('input').focus();
+        // home.classList.add("hover");
+        // home.querySelector('input').focus();
     } if (event.keyCode == 113) {
         modal.style.display = "block"
     } if  (event.keyCode == 27) {

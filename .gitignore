@@ -1,7 +1,4 @@
 node_modules/*
 .sass-cache/*
 gulpfile.js
-sass/style2.scss
-css/style2.css
-index-ready.html
-package.json
+sass/style.scss
