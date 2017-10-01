@@ -131,6 +131,16 @@ float: left;
     border-style: dashed black;
 }
 
+.modalIcon {
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    margin-right: 5px;
+    border-radius: 25%;
+    border-style: dashed black;
+}
+
+
 input.button{
    border:0;
    background: none;
@@ -176,7 +186,7 @@ input.button{
     h6 {
         font-size: 2em;
         text-align: center;
-        margin-top: 240px;
+        margin-top: 150px;
         margin-bottom: 20px;
         font-weight: normal;
     }
@@ -208,7 +218,7 @@ input.button{
     text-align: center;
     margin-top: 60px;
     a {
-        color: black;
+        color: white;
     }
 }
 

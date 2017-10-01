@@ -1,4 +1,4 @@
-console.log("Cieszę się, że zaglądasz do konsoli. Widzisz errory? Pojawiają się jak wciskasz klawisze uruchomiające konsolę. Jak ich nie wciskasz, to nie ma errorów ;) It's not a bug, it's a feature! A tak serio to ma to związek z dodaniem obsługi strony przez klawiaturę i pojawiają się kiedy wciskasz klawisze do których nie ma przypisanytch eventów, jeszcze nie wiem jak ich uniknąć zachowując obsługę klawiszami. Nie ma to wpływu na działanie strony. Chyba, że Ty wiesz, to daj znać ;)");
+console.log("Ekstra, ze tu zaglądasz, jeśli szukasz szybko uczącego się juniora do swojego zespołu, wiesz do kogo pisać. Nie umiem wszystkiego, ale powiedz co i będę umiał za godzinę ;)");
 
     var active = document.querySelector(".hover") || document.querySelector(".hoverlist li");
 
@@ -18,6 +18,9 @@ console.log("Cieszę się, że zaglądasz do konsoli. Widzisz errory? Pojawiają
             active = active.nextElementSibling || active;
         }else if (e.which == 38){
             active = active.previousElementSibling || active;
+        } else if (typeof(active) != 'undefined' && active != null){
+            active.classList.add("hover");
+            active.querySelector('input').focus();
         }else{
             active = e.target;
         }
@@ -65,11 +68,9 @@ console.log("Cieszę się, że zaglądasz do konsoli. Widzisz errory? Pojawiają
 
     document.addEventListener("keyup", function(event) {
         event.preventDefault();
-        if (event.keyCode == 113) {
+        if  (event.keyCode == 27) {
+            window.location = "about.html"
+        } else if (event.keyCode == 113) {
             modal.style.display = "block"
-        } else if  (event.keyCode == 27) {
-            window.location = "index.html"
-        } else {
-            console.log("ała, za każdym razem jak mnie wciskasz, a nie mam funkcji, to robię błąd :(");
         }
     });
