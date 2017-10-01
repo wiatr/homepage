@@ -1,4 +1,3 @@
-
 console.log("Cieszę się, że zaglądasz do konsoli. Widzisz errory? Pojawiają się jak wciskasz klawisze uruchomiające konsolę. Jak ich nie wciskasz, to nie ma errorów ;) It's not a bug, it's a feature! A tak serio to ma to związek z dodaniem obsługi strony przez klawiaturę i pojawiają się kiedy wciskasz klawisze do których nie ma przypisanytch eventów, jeszcze nie wiem jak ich uniknąć zachowując obsługę klawiszami. Nie ma to wpływu na działanie strony. Chyba, że Ty wiesz, to daj znać ;)");
 
 var modal = document.getElementById('myModal');
@@ -63,15 +62,27 @@ function typewriter()
  }
 }
 
-document.addEventListener("load", typewriter());
+var blink = document.getElementById('blink')
+var home = document.querySelector(".hover")
 
 document.addEventListener("keyup", function(event) {
     event.preventDefault();
-    if (event.keyCode == 113) {
+    if (event.keyCode == 32) {
+        typewriter();
+        blink.style.display = "none"
+        home.classList.add("hover");
+        home.querySelector('input').focus();
+    } if (event.keyCode == 113) {
         modal.style.display = "block"
-    } else if  (event.keyCode == 27) {
+    } if  (event.keyCode == 27) {
         window.location = "index.html"
     } else {
         console.log("ała, za każdym razem jak mnie wciskasz, a nie mam funkcji, to robię błąd :(");
     }
 });
+
+var touch = document.getElementById("touch");
+touch.addEventListener('touchstart', function(event){
+    typewriter();
+    touch.style.display = "none";
+}, false)
