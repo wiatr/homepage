@@ -9,7 +9,7 @@
     <link href="favicon.ico" rel="icon" type="image/x-icon" />
 </head>
 <body>
-    <header class= "top col12">
+    <header class= "top col-12">
         <span>C:\ Cześć, miło Cię widzieć ;)</span>
     </header>
     <section class="container">
@@ -19,11 +19,11 @@
             <div class="innerFrame">
                 <ul class = "hoverlist">
                     <form action="index.html"><input class= "button categories"    type="submit" value="      Name  |  Size | Time" /></form>
-                    <li><form action="index.html" >
+                    <li><form action="index.html">
                         <input class= "button"    type="submit" value="/ ..        |       |     " /></form></li>
                     <li><form action="index.html" >
                         <input class= "button"    type="submit" value="/home       | 5.4 kb|Sep 20 2017" /></form></li>
-                    <li class = "hover"><form action="about.html">
+                    <li><form action="about.html">
                         <input class= "button" type="submit" value="/my story   | 5.4 kb|Sep 20 2017" /></form></li>
                     <li><form action="projects.html">
                         <input class= "button" type="submit" value="/projects   | 5.4 kb|Sep 20 2017" /></li>
@@ -31,7 +31,7 @@
                     <li><form action="experience.html">
                         <input class= "button" type="submit" value="/experience | 5.4 kb|Sep 20 2017" /></li>
                     </form>
-                    <li class = "notyet"><form action="play.html">
+                    <li class = "hover"><form action="play.html">
                         <input class= "button" type="submit" value="/play       | 5.4 kb|Oct 04 2017" /></li>
                     </form>
                     <li><form action="contact.html">
@@ -41,28 +41,49 @@
             </div>
             </div>
             </div>
-        <div class="dosFrame2 col-8">
+        <div class="dosFrame2 col-8" id= "front">
         <div class="frame">
-                    <div class="innerFrame">
-                        <div class="content">Content</div>
-                        <p id="typedtext2"></p>
-                        <p>Dlatego studiowałem psychologię i skończyłem bootcamp. Później w pracy zajmowałem się projektowaniem i tworzeniem procesów, produktów i projektów edukacyjnych. Przeprowadziłem ponad 2000 godzin szkoleń i warsztatów dla osób i organizacji z kilkudziesięciu krajów. Używałem w nich nowych technologii, zlecałem robienie aplikacji natywnych i webowych. Zawsze myślałem, że żeby zajmować się zawodowo programowaniem, trzeba skończyć informatykę.
-                            Kiedy poznałem osoby, które ukończyły bootcampy i dowiedziałem się, że można to zrobić też w inny sposób, byłem podekscytowany. Z tego powodu postanowiłem zostać programistą i ukończyłem bootcamp Coders Lab, Javascript Developer: React. Chcę zostać jak najlepszym programistą front-end, specjalizować się w javascript i rozwijać się w kierunku UX.</p>
+            <div class="innerFrame">
+                <div class="content">Content</div>
+                <p id ="blink">< Press SPACEBAR to start ></p>
+                <p id ="blinkA">< Press RIGHT/LEFT arrow to play ></p>
+                <!-- <p id="touch">< TAP to start></p> -->
+                <canvas id="myCanvas"></canvas>
+                <div id="myModal2" class="modal2 col12">
+                        <div class="modal-content2">
+                          <div class="modalFrame2">
+                              <h5>< You WIN!></h5>
+                              <p>  Wygrałaś/eś, czuję, że dobrze by się nam razem pracowało ;) Napisz do mnie:</p>
+                              <p><span class = "modalIcon"> @ </span><a href="mailto: krzywiatr@gmail.com">krzywiatr@gmail.com</a></p>
+                              <h6>< Press ESC to play again ></h6>
+                          </div>
+                        </div>
+                      </div>
+                <div id="myModal3" class="modal2 col12">
+                        <div class="modal-content2">
+                          <div class="modalFrame2">
+                              <h5>< Try again!></h5>
+                              <p>  Podoba Ci się ten pomysł i klimat? Dogadamy się! Napisz do mnie:</p>
+                              <p><span class = "modalIcon"> @ </span><a href="mailto: krzywiatr@gmail.com">krzywiatr@gmail.com</a></p>
+                              <h6>< Press ESC to play again ></h6>
+                          </div>
+                        </div>
+                      </div>      
             </div>
         </div>
     </div>
 </div>
 
-        <div id="myModal" class="modal col12">
-              <div class="modal-content">
-                    <div class="modalFrame">
-                        <h5>< Potrzebujesz pomocy? ></h5>
-                        <p>Z checią pomogę Ci we wszystkim związanym z front-endem. Jeśli szukasz kogoś dla swojego klienta, zespołu, napisz do mnie na:</p>
-                        <p><span class = "modalIcon"> @ </span><a href="mailto: krzywiatr@gmail.com">krzywiatr@gmail.com</a></p>
-                        <h6>< Press ESC to exit ></h6>
-                    </div>
-              </div>
-        </div>
+<div id="myModal" class="modal col12">
+    <div class="modal-content">
+      <div class="modalFrame">
+          <h5>< Potrzebujesz pomocy? ></h5>
+          <p>Z checią pomogę Ci we wszystkim związanym z front-endem. Jeśli szukasz kogoś dla swojego klienta, zespołu, napisz do mnie na:</p>
+          <p><span class = "modalIcon"> @ </span><a href="mailto: krzywiatr@gmail.com">krzywiatr@gmail.com</a></p>
+          <h6>< Press ESC to exit ></h6>
+      </div>
+    </div>
+  </div>
     </section>
 
     <footer class="col-12">
@@ -77,5 +98,5 @@
         </div>
     </footer>
 </body>
-<script src="./js/about.js" type="text/javascript"></script>
+<script src="./js/play.js" type="text/javascript"></script>
 </html>

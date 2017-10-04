@@ -12,20 +12,31 @@ body {
 a {
     color: #F4FF6C;
 }
+canvas {  
+    display: block; 
+    width: 100%;
+    height: 100%;
+}
 
 #typedtext2 {
     text-align: center;
 }
 
-#blink, #touch {
+#blink, #blinkA, #touch {
     text-align: center;
     font-size: 3em;
     animation: blinker 1.5s linear infinite;
+    padding-top: 2em;
 
 }
 
-#blink {
-    padding-top: 100px;
+#blinkA {
+    font-size: 2em;
+    padding-top: 3em;
+}
+
+.blink {
+    padding-top: 40px;
 }
 
 @keyframes blinker {
@@ -95,7 +106,8 @@ float: left;
 
 .innerFrame {
     border: solid 1px white;
-    min-height: 100%;
+    height: 100%;
+    width: 100%;
     color: white;
     padding: 5px;
     text-align: left;
@@ -132,7 +144,7 @@ float: left;
 }
 
 .modalIcon {
-    background-color: black;
+    background-color:black;
     color: white;
     font-weight: bold;
     margin-right: 5px;
@@ -218,6 +230,63 @@ input.button{
     text-align: center;
     margin-top: 60px;
     a {
+        color: #F4FF6C;
+    }
+}
+
+.modalFrame2 {
+    border: 2px double black;
+    min-height: 100%;
+    padding: 5px;
+    margin-left: 5px;
+    h5 {
+        font-size: 2em;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 40px;
+        font-weight: normal;
+    }
+    p {
+        font-size: 1.5em;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+    h6 {
+        font-size: 2em;
+        text-align: center;
+        margin-top: 150px;
+        margin-bottom: 20px;
+        font-weight: normal;
+    }
+}
+
+.modal2 {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 5px;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.modal-content2 {
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 55%;
+    color: #000000;
+    background: #ACAEAD;
+    padding:10px 5px;
+    margin: 10px 5px;
+    margin-left: -5px;
+    height: 70vh;
+    box-shadow: 25px 25px 0px 0px #000000;
+    text-align: center;
+    margin-top: 60px;
+    a {
         color: white;
     }
 }
@@ -279,6 +348,32 @@ input.button{
     }
     .logo {
         padding-bottom: 2em;
+    }
+    // .modal-content2{
+    //     width: 20em;
+    //     margin-top: 2em;
+    //     height: none;
+    // }
+    // .modalFrame2 {
+    //     min-height: none;
+
+    //     h5 {
+    //         margin-top: 20px;
+    //         margin-bottom: 40px;
+    //     }
+    //     p {
+
+    //         margin-top: 20px;
+    //         margin-bottom: 40px;
+    //     }
+    //     h6 {
+
+    //         margin-top: 10px;
+    //         margin-bottom: 20px;
+    //     }
+    // }
+    .notyet {
+        display: none;
     }
 }
 
