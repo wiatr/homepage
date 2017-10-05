@@ -26,18 +26,15 @@ canvas {
     text-align: center;
     font-size: 3em;
     animation: blinker 1.5s linear infinite;
-    padding-top: 2em;
+   // padding-top: 1em;
 
 }
 
 #blinkA {
     font-size: 2em;
-    padding-top: 3em;
+    padding-top: 0.5em;
 }
 
-.blink {
-    padding-top: 40px;
-}
 
 @keyframes blinker {
   50% { opacity: 0; }

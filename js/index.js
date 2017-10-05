@@ -66,13 +66,13 @@ function typewriter()
  }
 }
 
-var blink = document.getElementById('blink')
+var blinkF = document.getElementById('blinkFront')
 
 document.addEventListener("keyup", function(event) {
     event.preventDefault();
     if (event.keyCode == 32) {
         typewriter();
-        blink.style.display = "none"
+        blinkF.style.display = "none"
     } else if (event.keyCode == 113) {
         modal.style.display = "block"
     } else if  (event.keyCode == 27) {
