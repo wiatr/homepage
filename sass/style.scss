@@ -22,16 +22,22 @@ canvas {
     text-align: center;
 }
 
-#blink, #blinkA, #touch {
+#blink, #blinkA, #touch, #blinkFront {
     text-align: center;
     font-size: 3em;
     animation: blinker 1.5s linear infinite;
-   // padding-top: 1em;
 
+}
+#blinkFront, {
+    padding-top: 3em;
+}
+
+#touch {
+    margin-top: 2em;
 }
 
 #blinkA {
-    font-size: 2em;
+    font-size: 1.8em;
     padding-top: 0.5em;
 }
 
@@ -324,7 +330,7 @@ input.button{
     #front {
         height: 25em;
     }
-    #blink {
+    #blinkFront {
         display: none;
     }
     .bottom {
