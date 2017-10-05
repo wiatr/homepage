@@ -125,7 +125,8 @@ function draw() {
         else {
             lives--;
             if(!lives) {
-                modal3.style.display = "block"
+                modal3.style.display = "block";
+
             }
             else {
                 x = canvas.width/2;
@@ -220,7 +221,8 @@ function collisionDetection() {
                     b.status = 0;
                     score++;
                     if(score == brickRowCount*brickColumnCount) {
-                        modal2.style.display = "block";
+                       modal2.style.display = "block";
+                       lives = 100;
                     }
                 }
             }
