@@ -9,6 +9,11 @@ body {
   background-color: #4200B4;
 }
 
+@viewport {
+  orientation: portrait;
+}
+
+
 a {
   color: #F4FF6C;
 }
@@ -19,7 +24,7 @@ canvas {
   height: 100%;
 }
 
-#typedtext2 {
+#typedtext2, .projects {
   text-align: center;
 }
 
