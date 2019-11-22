@@ -1,4 +1,4 @@
-console.log("Ekstra, ze tu zaglądasz, jeśli szukasz szybko uczącego się juniora do swojego zespołu, wiesz do kogo pisać. Nie umiem wszystkiego, ale powiedz co i będę umiał za godzinę ;)");
+console.log("Great, that you check console. I would love to work with such insightful person ;)");
 
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");

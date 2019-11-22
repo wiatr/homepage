@@ -1,4 +1,4 @@
-console.log("Ekstra, ze tu zaglądasz, jeśli szukasz szybko uczącego się juniora do swojego zespołu, wiesz do kogo pisać. Nie umiem wszystkiego, ale powiedz co i będę umiał za godzinę ;)");
+console.log("Great, that you check console. I would love to work with such insightful person ;)");
 
     var active = document.querySelector(".hover") || document.querySelector(".hoverlist li");
 
@@ -29,7 +29,7 @@ console.log("Ekstra, ze tu zaglądasz, jeśli szukasz szybko uczącego się juni
    });
 
    var aText = new Array(
-   "Pasjonuje mnie technologia i ludzie."
+   "I'm passionate about people and technology."
    );
    var iSpeed = 50;
    var iIndex = 0;

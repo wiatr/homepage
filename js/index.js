@@ -1,4 +1,4 @@
-console.log("Ekstra, ze tu zaglądasz, jeśli szukasz szybko uczącego się juniora do swojego zespołu, wiesz do kogo pisać. Nie umiem wszystkiego, ale powiedz co i będę umiał za godzinę ;)");
+console.log("Great, that you check console. I would love to work with such insightful person ;)");
 
 var modal = document.getElementById('myModal');
 
@@ -32,9 +32,9 @@ document.addEventListener("keydown", function (e){
 });
 
 var aText = new Array(
-"Mam na imię Krzysiek, moim pierwszym komputerem był IBM 386 SLC. Od tego momentu pasjonują mnie komputery i uwielbiam grafikę 8-bit. Obecnie szukam pierwszej pracy jako front-end developer. Jeśli podoba Ci się to co robię, odezwij się!",
-"Bez obaw, potrafię robić też strony, które wyglądają nowocześnie. Skończyłem bootcamp Javascript Developer: React w Coders Lab ;)"
-);
+    "My name is Krzysiek, my first computer was IBM 386 SLC. From that moment I am passionate about technologu. I am currently looking for new opportunities at the meeting point of technologu and people. If you like what I do, please write to me to me!",
+    "No worries, I can develop web apps that look modern. I've finished bootcamp Javascript Developer: React at Coders Lab;)"
+    );
 var iSpeed = 30;
 var iIndex = 0;
 var iArrLength = aText[0].length;
