@@ -29,7 +29,7 @@ console.log("Great, that you check console. I would love to work with such insig
    });
 
    var aText = new Array(
-   "I'm passionate about people and technology."
+   "I'm passionate about technology."
    );
    var iSpeed = 50;
    var iIndex = 0;
